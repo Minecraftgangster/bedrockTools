@@ -4,8 +4,8 @@ source "./serverConfig.sh"; # import configuration
 source "../languageFiles/${LANG_SELECTED}.sh"; # load user-selected language (default: en)
 
 function greet {
-    echo "Deine Auswahl war Server ${mServers[$CHOICE]}";
-    echo "Um die Befehlskonsole zu beenden, gebe einfach \"q\" ein. Für Hilfe, .help (oder help für die Bedrock-interne Hilfe.)";
+    echo "${LANG_YOURCHOISEWAS} ${mServers[$CHOICE]}";
+    echo "${LANG_LEAVESCMD}";
     echo
 }
 
@@ -16,7 +16,7 @@ function runOnServer {
         sleep .25; # wait for 250ms to collect log data
         LOGTEXT=`cat ./screenlog.* | tail -n +2`; echo "$LOGTEXT"; # display latest output from the server
         if [ ! -z "$LOGTEXT" ]; then echo; fi
-        cd $brToolsHOME;
+        cd "${brToolsHOME}/bedrockTools/";
 }
 
 function extrap () {

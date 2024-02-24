@@ -5,6 +5,8 @@ LANG_APP_TITLE="Tasks";
 LANG_APP_MENU="Choose a task:";
 LANG_APP_TITLE_SCMD="Server";
 LANG_APP_MENU_SCMD="Choose a server:";
+LANG_YOURCHOISEWAS="Your choice was"
+LANG_LEAVESCMD="To quit the command console, just enter \"q\". For help, type .help (or just help for the Bedrock servers internal help)";
 
 LANG_EXECUTE_QUESTION="Execute task?";
 LANG_OFFLINE_QUESTION="Please only execute this if all servers are offline!";
@@ -37,7 +39,7 @@ BedrockTools Commands\n\
 Minecraft-Commands\n\
 ––––––––––––––––––––––––––––––––––––––––––––––––––––\n\
 tp <user> <x> <y> <z>\n\
-             Teleportierts a user to x-y-z\n\
+              Teleports a user to x-y-z\n\
               \n\
 fill <x> <y> <z> <x2> <y2> <z2> <object>\n\
               Fills from x-y-z to x2-y2-z2\n\

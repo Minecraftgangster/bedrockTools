@@ -5,6 +5,8 @@ LANG_APP_TITLE="Aufgaben";
 LANG_APP_MENU="Wähle eine Aufgabe:";
 LANG_APP_TITLE_SCMD="Server";
 LANG_APP_MENU_SCMD="Wähle einen Server:";
+LANG_YOURCHOISEWAS="Deine Auswahl war";
+LANG_LEAVESCMD="Um die Befehlskonsole zu beenden, gebe einfach \"q\" ein. Für Hilfe, .help (oder help für die Bedrock-Server-interne Hilfe.)";
 
 LANG_EXECUTE_QUESTION="Vorgang durchführen?";
 LANG_OFFLINE_QUESTION="Bitte nur, wenn sicher alle Server offline sind!";
