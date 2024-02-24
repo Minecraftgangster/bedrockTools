@@ -3,7 +3,7 @@
 echo "ShakeSpeare Minecraft Bot v1.0 (part of bedrockTools)";
 
 source ../bedrockTools/serverConfig.sh
-lastTime=$(date +%s); lastTime=$((lastTime - CTime)); // make sure it triggers at launch
+lastTime=0; // make sure it triggers at launch
 
 function sendQuote {
     qFile="./quotes-${LANG_SELECTED}";
