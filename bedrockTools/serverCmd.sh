@@ -31,8 +31,8 @@ trap extrap INT
  tGreen=`tput setaf 2`;   # for green text
 
 counter=0;
-HEIGHT=15;
-WIDTH=40;
+HEIGHT=0;
+WIDTH=0;
 CHOICE_HEIGHT=4;
 BACKTITLE="${LANG_APP_BACKTITLE}";
 TITLE="${LANG_APP_TITLE_SCMD}";

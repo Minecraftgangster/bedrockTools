@@ -9,8 +9,8 @@ if [ ! -f "./bedrockTools/serverConfig.sh" ]; then echo "Error: Run setup.sh to 
 source "./bedrockTools/serverConfig.sh"; # import configuration
 source "./languageFiles/${LANG_SELECTED}.sh"; # load user-selected language (default: en)
 
-HEIGHT=15
-WIDTH=40
+HEIGHT=0
+WIDTH=0
 CHOICE_HEIGHT=4
 BACKTITLE="${LANG_APP_BACKTITLE}"
 TITLE="${LANG_APP_TITLE}"
