@@ -12,18 +12,27 @@ if [ -f ./backups.zip ]; then echo "Error: There already is a backup archive!"; 
         mkdir ./backups/;
     fi
 
-    for value in "${mServers[@]}"
+    for i in "${!mServers[@]}"
     do
-        echo "--- Collecting backups from $value..."
-        find "${brToolsHOME}/$value/worlds/" -maxdepth 1 -iname "*_*" -exec echo {} \;
-        find "${brToolsHOME}/$value/worlds/" -maxdepth 1 -iname "*_*" -exec cp -rf {} ./backups/ \;
+        value=${mServers[$i]};
+        sDir=${mDirs[$i]};
+
+        echo "--- Collecting backups from $value... (Directory $sDir/worlds/)"
+        find "$sDir/worlds/" -maxdepth 1 -iname "*_*" -exec echo {} \;
+        find "$sDir/worlds/" -maxdepth 1 -iname "*_*" -exec cp -rf {} ./backups/ \;
     done
 
     echo "--- Compressing backups..."
     zip -r ./backups.zip ./backups/
     echo "--- Cleaning up..."
     rm -rf ./backups/
-    for value in "${mServers[@]}"; do echo "Removing backups from $value..."; cd "$HOME/$value/worlds/"; rm -rf ./*_*; done
+    for i in "${!mServers[@]}";
+    do
+        value=${mServers[$i]};
+        sDir=${mDirs[$i]};
+
+        echo "Removing backups from $value..."; cd "$sDir/worlds/"; rm -rf ./*_*;
+    done
     echo "--- Done."
 fi
 
