@@ -3,7 +3,7 @@
 echo "ShakeSpeare Minecraft Bot v1.0 (part of bedrockTools)";
 
 source ../bedrockTools/serverConfig.sh
-nextTime=$(date +%s);
+lastTime=$(date +%s); lastTime=$((lastTime - CTime)); // make sure it triggers at launch
 
 function sendQuote {
     qFile="./quotes-${LANG_SELECTED}";
@@ -27,9 +27,9 @@ function isBackupTime {
 }
 
 while [ true ]; do
-    if [ "$(date +%s)" -ge "$nextTime" ]; then
+    if [ "$(date +%s)" -ge "$((lastTime + CTime))" ]; then
         sendQuote;
-        nextTime=$((nextTime + CTime));
+        lastTime="$(date +%s)";
     fi
 
     backupTime=$(isBackupTime);
