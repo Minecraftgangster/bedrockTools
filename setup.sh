@@ -6,16 +6,10 @@ echo "####################################################";
 
 echo "- Checking dependencies...";
 
-phpIns=`which php`;
 screenIns=`which screen`
 dialogIns=`which dialog`
 zipIns=`which zip`
 
-if [ "${phpIns}" == "" ]; then
-    echo "Error: PHP missing on your system"; exit 1;
-else
-    echo "PHP found at ${phpIns}";
-fi
 if [ "${screenIns}" == "" ]; then
     echo "Error: screen missing on your system"; exit 1;
 else
