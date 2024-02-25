@@ -6,25 +6,15 @@ echo "####################################################";
 
 echo "- Checking dependencies...";
 
-screenIns=`which screen`
-dialogIns=`which dialog`
-zipIns=`which zip`
+dependArr=("screen" "dialog" "zip"); # dependencies
 
-if [ "${screenIns}" == "" ]; then
-    echo "Error: screen missing on your system"; exit 1;
-else
-    echo "screen found at ${screenIns}";
-fi
-if [ "${dialogIns}" == "" ]; then
-    echo "Error: dialog missing on your system"; exit 1;
-else
-    echo "dialog found at ${dialogIns}";
-fi
-if [ "${zipIns}" == "" ]; then
-    echo "Error: zip missing on your system"; exit 1;
-else
-    echo "zip found at ${zipIns}";
-fi
+for value in ${dependArr[*]}; do
+    if [ `which $value` == "" ]; then
+        echo "Error: $value missing on your system"; exit 1;
+    else
+        echo "$value found at `which $value`";
+    fi
+done
 
 if [ ! -f ./bedrockTools/serverConfig.sh ]; then
     echo "No configuration found. Generating configuration files...";
