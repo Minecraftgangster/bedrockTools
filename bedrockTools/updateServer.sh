@@ -32,12 +32,12 @@ else
          sDir="${mDirs[$i]}";
 
         echo "--- Updating '$value'...";
-        cp -rf "./upd/bedrock_server" "${sDir}bedrock_server"; echo "$value :: bedrock_server";
-        cp -rf "./upd/release-notes.txt" "${sDir}release-notes.txt"; echo "$value :: release-notes.txt";
-        cp -rf "./upd/behavior_packs/" "${sDir}behavior_packs/"; echo "$value :: behavior_packs/";
-        cp -rf "./upd/config/" "${sDir}config/"; echo "$value :: config/";
-        cp -rf "./upd/definitions/" "${sDir}definitions/"; echo "$value :: definitions/";
-        cp -rf "./upd/bedrock_server_symbols.debug" "${sDir}bedrock_server_symbols.debug"; echo "$value :: bedrock_server_symbols.debug";
+        cp -rf "./upd/bedrock_server" "${sDir}/bedrock_server"; echo "$value :: bedrock_server";
+        cp -rf "./upd/release-notes.txt" "${sDir}/release-notes.txt"; echo "$value :: release-notes.txt";
+        cp -rf "./upd/behavior_packs/" "${sDir}/behavior_packs/"; echo "$value :: behavior_packs/";
+        cp -rf "./upd/config/" "${sDir}/config/"; echo "$value :: config/";
+        cp -rf "./upd/definitions/" "${sDir}/definitions/"; echo "$value :: definitions/";
+        cp -rf "./upd/bedrock_server_symbols.debug" "${sDir}/bedrock_server_symbols.debug"; echo "$value :: bedrock_server_symbols.debug";
         echo "--- Done for '$value'..."
     done
 

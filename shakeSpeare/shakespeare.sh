@@ -3,7 +3,7 @@
 echo "ShakeSpeare Minecraft Bot v1.0 (part of bedrockTools)";
 
 source ../bedrockTools/serverConfig.sh
-lastTime=0; // make sure it triggers at launch
+lastTime=0; # make sure it triggers at launch
 
 function sendQuote {
     qFile="./quotes-${LANG_SELECTED}";
@@ -35,7 +35,7 @@ while [ true ]; do
     backupTime=$(isBackupTime);
     if [ "$backupTime" == "true" ]; then
         for i in ${!mServers[@]}; do
-            worldDir="${mDirs[$i]}worlds/${mWorlds[$i]}";
+            worldDir="${mDirs[$i]}/worlds/${mWorlds[$i]}";
             echo "SERVER    ${mServers[$i]}";
             echo "DIRECTORY ${mDirs[$i]}";
             echo "WORLDDIR  $worldDir";
